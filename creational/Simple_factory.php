@@ -1,6 +1,5 @@
 <?php
 
-// ----------- 1 -----------
 class Worker
 {
     private string $name;
