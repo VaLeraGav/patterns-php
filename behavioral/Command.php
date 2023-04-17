@@ -89,17 +89,24 @@ class ChangerStatus implements Undoable
 }
 
 $output = new Output();
-$invoker = new Invoker();
-
 $message = new Message($output);
 
+// 1
+//$invoker = new Invoker();
+//$changerStatus = new ChangerStatus($output);
+//$invoker->setCommand($message);
+//$invoker->run();
+//echo $output->getBody(); // some string from execute
+
+// 2
 // выключатель
 $changerStatus = new ChangerStatus($output);
-//$changerStatus->undo(); // выключает
+$changerStatus->undo(); // выключает
 //$changerStatus->execute(); // выключает
 
-$message->execute();
+$message->execute(); // выполнение
 echo $output->getBody(); // some string from execute
+echo "\n\n";
 
 // ----------- 2 -----------
 
@@ -339,15 +346,21 @@ $receiver = new Receiver();
 
 $invoker->setCommand(new HelloCommand($receiver));
 $invoker->run();
-echo $receiver->getOutput(); // Hello World
+echo "\n" . $receiver->getOutput();
+// Hello World
 
 $messageDateCommand = new AddMessageDateCommand($receiver);
 $messageDateCommand->execute();
 
 $invoker->run();
-echo $receiver->getOutput(); // "Hello World Hello World [" . date('Y-m-d') . ']
+echo "\n" . $receiver->getOutput();
+// Hello World
+// Hello World [2023-04-17]
 
 $messageDateCommand->undo();
 
 $invoker->run();
-echo $receiver->getOutput(); // Hello World Hello World [" . date('Y-m-d') . "] Hello World
+echo "\n" . $receiver->getOutput();
+// Hello World
+// Hello World [2023-04-17]
+// Hello World

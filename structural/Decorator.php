@@ -121,6 +121,7 @@ interface Booking
     public function getDescription(): string;
 }
 
+// Шаблон "Декоратор" хранит ссылку на объект (компонент), определяет его интерфейс и переадресует на него рабочие запросы.
 abstract class BookingDecorator implements Booking
 {
     public function __construct(protected Booking $booking)
@@ -128,6 +129,7 @@ abstract class BookingDecorator implements Booking
     }
 }
 
+// Системный компонент определяет интерфейс объекта, на который могут быть динамически возложены дополнительные обязанности
 class DoubleRoomBooking implements Booking
 {
     public function calculatePrice(): int
@@ -141,6 +143,7 @@ class DoubleRoomBooking implements Booking
     }
 }
 
+// Конкретный компонент определяет объект, на который возлагаются дополнительные обязанности.
 class ExtraBed extends BookingDecorator
 {
     private const PRICE = 30;

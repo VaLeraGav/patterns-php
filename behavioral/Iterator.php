@@ -5,33 +5,21 @@ class WorkerList
     private array $list = [];
     private int $index = 0;
 
-    /**
-     * @return int
-     */
     public function getIndex(): int
     {
         return $this->index;
     }
 
-    /**
-     * @param int $index
-     */
     public function setIndex(int $index): void
     {
         $this->index = $index;
     }
 
-    /**
-     * @return array
-     */
     public function getList(): array
     {
         return $this->list;
     }
 
-    /**
-     * @param array $list
-     */
     public function setList(array $list): void
     {
         $this->list = $list;
@@ -74,17 +62,11 @@ class Worker
 {
     private string $name = '';
 
-    /**
-     * @param string $name
-     */
     public function __construct(string $name)
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
@@ -147,7 +129,6 @@ class BookList implements Countable, Iterator
                 unset($this->books[$key]);
             }
         }
-
         $this->books = array_values($this->books);
     }
 

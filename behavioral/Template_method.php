@@ -1,7 +1,9 @@
 <?php
 
+// "Абстрактный класс" определяет абстрактные операции, замещаемые в конкретных подклассах для реализации шагов алгоритма.
 abstract class Task
 {
+    // "Шаблонный метод" определяет "скелет" алгоритма.
     public function printSections() // build
     {
         $this->printHeader();
@@ -28,6 +30,7 @@ abstract class Task
     abstract protected function printCustom();
 }
 
+//"Конкретный класс" предполагает, что инвариантные шаги алгоритма будут выполнены в "абстрактном классе".
 class DeveloperTask extends Task
 {
     protected function printCustom()

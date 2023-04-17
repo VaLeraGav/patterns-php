@@ -100,9 +100,9 @@ class DatabaseConnection
 
     public function getDsn(): string
     {
-        // this is just for the sake of demonstration, not a real DSN
-        // notice that only the injected config is used here, so there is
-        // a real separation of concerns here
+        // это просто для демонстрации, а не настоящий DSN
+        // обратите внимание, что здесь используется только введенная конфигурация, поэтому есть
+        // реальное разделение проблем здесь
 
         return sprintf(
             '%s:%s@%s:%d',

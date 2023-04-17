@@ -64,6 +64,7 @@ class Jun extends Handler
     }
 }
 
+// 1
 $task = new DevTask();
 
 $senior = new Senior(null);
@@ -71,7 +72,7 @@ $middle = new Middle($senior);
 $jun = new Jun($middle);
 print_r($jun->handle($task)); // вернет массив
 
-
+// 2
 $task2 = new DevTask();
 
 $jun = new Jun(null);

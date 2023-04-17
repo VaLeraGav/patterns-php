@@ -119,24 +119,18 @@ class LightTheme implements Theme
     }
 }
 
-class AquaTheme implements Theme
-{
-    public function getColor()
-    {
-        return 'Light blue';
-    }
-}
-
 $darkTheme = new DarkTheme();
 
 $about = new About($darkTheme);
-$careers = new Careers($darkTheme);
 echo $about->getContent(); // About page in Dark Black
+
+$careers = new Careers($darkTheme);
 echo $careers->getContent(); // Careers page in Dark Black
 
 $lightTheme = new LightTheme();
 
 $about1 = new About($lightTheme);
-$careers2 = new Careers($lightTheme);
 echo $about1->getContent(); //  About page in Off white
+
+$careers2 = new Careers($lightTheme);
 echo $careers2->getContent(); // Careers page in Off white

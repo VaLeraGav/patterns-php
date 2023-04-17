@@ -64,10 +64,6 @@ class Section
 {
     private string $text;
 
-    /**
-     * Section constructor.
-     * @param string $text
-     */
     public function __construct(string $text)
     {
         $this->text = $text;

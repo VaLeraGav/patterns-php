@@ -65,13 +65,16 @@ class Context
     }
 }
 
+// Создать интерфейс (стратегию), описывающий этот алгоритм.
 interface Comparator
 {
     public function compare($a, $b): int;
 }
 
+// Поместить каждый алгоритм в собственный класс.
 class DateComparator implements Comparator
 {
+    // Определить алгоритмы, который подвержены частым изменениям
     public function compare($a, $b): int
     {
         $aDate = new DateTime($a['date']);
