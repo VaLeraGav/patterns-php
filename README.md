@@ -10,9 +10,13 @@
 
 <!-- [Принципы проектирования:Java (Отношения с другими паттернами)](https://github.com/DGarbar/Patterns) -->
 
+[//]: # (https://github.com/sauron918/design-patterns-cookbook)
+
 - [Паттерны проектирования (GoF) (Александра Швеца)](https://radioprog.ru/category/183)
 
 - [Аналитические шаблоны проектирования приложений: Информация](https://intuit.ru/studies/courses/3611/853/info)
+
+<!-- [Паттерны расписал, очень годно](https://github.com/Nagasadoy/phpVersionCompare) -->
 
 ## Шаблоны (паттерны) проектирования
 
@@ -1633,28 +1637,3 @@ IoC).
 **Недостатки:**
 
 [⏏ В начало](#patterns)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
